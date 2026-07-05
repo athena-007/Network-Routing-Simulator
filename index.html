@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OSPF Network Routing Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>OSPF Network Routing Simulator</h1>
+
+    <!-- ========================================= -->
+    <!-- Network Creation -->
+    <!-- ========================================= -->
+
+    <div class="card">
+
+        <h2>Create Network</h2>
+
+        <div class="row">
+
+            <input
+                type="number"
+                id="numRouters"
+                placeholder="Number of Routers">
+
+            <button id="createNetworkBtn">
+                Create Network
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Add Link -->
+    <!-- ========================================= -->
+
+    <div class="card">
+
+        <h2>Add Link</h2>
+
+        <div class="row">
+
+            <input
+                type="number"
+                id="router1"
+                placeholder="Router 1">
+
+            <input
+                type="number"
+                id="router2"
+                placeholder="Router 2">
+
+            <input
+                type="number"
+                id="cost"
+                placeholder="Cost">
+
+            <button id="addLinkBtn">
+                Add Link
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Find Path -->
+    <!-- ========================================= -->
+
+    <div class="card">
+
+        <h2>Find Shortest Path</h2>
+
+        <div class="row">
+
+            <input
+                type="number"
+                id="sourceRouter"
+                placeholder="Source">
+
+            <input
+                type="number"
+                id="destinationRouter"
+                placeholder="Destination">
+
+            <button id="findPathBtn">
+                Find Path
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Graph -->
+    <!-- ========================================= -->
+
+    <div class="card">
+
+        <h2>Network Visualization</h2>
+
+        <div class="canvasContainer">
+
+            <canvas
+                id="networkCanvas"
+                width="1000"
+                height="600">
+            </canvas>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Loading Animation -->
+    <!-- ========================================= -->
+
+    <div
+        class="card"
+        id="loadingCard"
+        style="display:none;">
+
+        <div class="loadingBox">
+
+            <div class="spinner"></div>
+
+            <h3>Running Dijkstra Algorithm...</h3>
+
+            <p>
+                Calculating shortest path...
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Result -->
+    <!-- ========================================= -->
+
+    <div class="card">
+
+        <h2>Result</h2>
+
+        <div id="result">
+
+            Waiting for input...
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
